@@ -4,7 +4,7 @@
 
 This scanner helps identify if your projects are affected by the Sha1-Hulud malware campaign, which has compromised over 800 npm packages including popular libraries like PostHog, Voiceflow, AsyncAPI, ENS Domains, Zapier, and many others. This is a resurgence of the original Shai-Hulud attack with significantly more destructive capabilities.
 
-## ⚠️ CRITICAL: What is Sha1-Hulud: The Second Coming?
+## CRITICAL: What is Sha1-Hulud: The Second Coming?
 
 Sha1-Hulud: The Second Coming is a massive supply chain attack discovered on November 24, 2025, targeting the npm ecosystem. This new variant has affected tens of thousands of GitHub repositories across multiple maintainers and ecosystems.
 
@@ -18,9 +18,9 @@ Attackers published malicious versions of hundreds of legitimate packages that:
 
 **Source:** [HelixGuard Security Alert](https://helixguard.ai/blog/malicious-sha1hulud-2025-11-24)
 
-## 🚀 Quick Start
+## Quick Start
 
-### 1. Install from GitHub Packages (Public)
+### 1. Install from GitHub Packages
 
 ```bash
 npm install -g @mottibec/sha1hulud-scanner
@@ -43,15 +43,15 @@ node bin/sha1hulud-scanner.js
 
 ## 📋 Features
 
-- ✅ **Detects 622 compromised packages** with 860 malicious versions
-- ✅ **Smart semver range checking** - detects if `^` or `~` ranges could install malicious versions
-- ✅ **Fast recursive scanning** - scans entire project trees
-- ✅ **Multiple output formats** - console (human-readable) or JSON (machine-readable)
-- ✅ **Configurable** - customize scan paths, exclusions, and verbosity
-- ✅ **Exit codes** - integrates with CI/CD pipelines
-- ✅ **Zero dependencies** - pure Node.js implementation
+- **Detects 622 compromised packages** with 860 malicious versions
+- **Smart semver range checking** - detects if `^` or `~` ranges could install malicious versions
+- **Fast recursive scanning** - scans entire project trees
+- **Multiple output formats** - console (human-readable) or JSON (machine-readable)
+- **Configurable** - customize scan paths, exclusions, and verbosity
+- **Exit codes** - integrates with CI/CD pipelines
+- **Zero dependencies** - pure Node.js implementation
 
-## 🎯 Usage
+## Usage
 
 ### Basic Scan
 
@@ -109,7 +109,7 @@ for dir in project1 project2 project3; do
 done
 ```
 
-## 🔍 What It Scans
+## What It Scans
 
 The scanner checks the following files:
 
@@ -119,13 +119,13 @@ The scanner checks the following files:
 - `pnpm-lock.yaml` - pnpm lock file
 - `npm-shrinkwrap.json` - npm shrinkwrap file
 
-## 📊 Understanding Results
+## Understanding Results
 
 ### Severity Levels
 
-- **🔴 CRITICAL**: Your version range could install a malicious version, or you have a malicious version installed
-- **🟡 WARNING**: Package name matches but your version appears safe (verify in lock files)
-- **ℹ️  INFO**: Package found but no specific threat detected
+- **CRITICAL**: Your version range could install a malicious version, or you have a malicious version installed
+- **WARNING**: Package name matches but your version appears safe (verify in lock files)
+- **INFO**: Package found but no specific threat detected
 
 ### Exit Codes
 
@@ -134,7 +134,7 @@ The scanner checks the following files:
 - `2` - Critical issues found (immediate action required)
 - `3` - Error during scan
 
-## 🛡️ What To Do If Infected
+## What To Do If Infected
 
 ### If CRITICAL Issues Found:
 
@@ -163,7 +163,7 @@ The scanner checks the following files:
 3. Pin versions to prevent accidental upgrades
 4. Monitor package maintainer announcements
 
-## 🔧 Programmatic Usage
+## Programmatic Usage
 
 You can use the scanner in your own Node.js scripts:
 
@@ -184,12 +184,12 @@ console.log(`Scanned ${results.summary.filesScanned} files`);
 // Process findings
 results.findings.forEach(finding => {
   if (finding.severity === 'CRITICAL') {
-    console.log(`⚠️  ${finding.package}@${finding.version} in ${finding.file}`);
+    console.log(`${finding.package}@${finding.version} in ${finding.file}`);
   }
 });
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how you can help:
 
@@ -198,7 +198,7 @@ We welcome contributions! Here's how you can help:
 3. **Improve detection logic** - Submit a PR with enhancements
 4. **Documentation** - Help improve this README
 
-## 📝 Database Updates
+## Database Updates
 
 The malicious package database is located in `data/malicious-packages-detailed.js`. To update:
 
@@ -208,32 +208,20 @@ The malicious package database is located in `data/malicious-packages-detailed.j
 4. Test with `npm run test`
 5. Submit a PR
 
-## ⚖️ License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details
 
-## 🙏 Credits
-
-- **HelixGuard** for discovering and documenting the SHA1HULUD attack
-- **npm Security Team** for their ongoing work to secure the ecosystem
-- **Open Source Community** for contributing to this tool
-
-## 📚 Additional Resources
-
-- [HelixGuard SHA1HULUD Report](https://helixguard.ai/blog/malicious-sha1hulud-2025-11-24)
-- [npm Security Best Practices](https://docs.npmjs.com/security-best-practices)
-- [Supply Chain Security Guide](https://github.com/ossf/wg-securing-software-repos)
-
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is provided as-is for security scanning purposes. While we strive for accuracy, it may not detect all threats or may produce false positives. Always verify findings and follow security best practices.
 
-## 🐛 Reporting Issues
+## Reporting Issues
 
 Found a bug or have a feature request? Please open an issue on our [GitHub Issues page](https://github.com/mottibec/sha1hulud-scanner/issues).
 
 ---
 
-**Stay Safe! 🛡️**
+**Stay Safe!**
 
-If you find this tool helpful, please ⭐ star the repository and share it with others!
+If you find this tool helpful, please star the repository and share it with others!
