@@ -7,7 +7,7 @@ class Reporter {
     const { summary, findings } = results;
 
     console.log('\n' + '='.repeat(70));
-    console.log('📊 SHA1HULUD MALWARE SCAN RESULTS');
+    console.log('📊 SHA1-HULUD: THE SECOND COMING - SCAN RESULTS');
     console.log('='.repeat(70));
     console.log(`Directories scanned: ${summary.directoriesScanned}`);
     console.log(`Files scanned: ${summary.filesScanned}`);
@@ -91,15 +91,19 @@ class Reporter {
 
     if (critical.length > 0) {
       console.log('🔴 CRITICAL - IMMEDIATE ACTION REQUIRED:');
-      console.log('   1. DO NOT run npm install/update');
-      console.log('   2. Check lock files for actual installed versions');
-      console.log('   3. If malicious versions are installed:');
-      console.log('      • Disconnect from network');
-      console.log('      • Remove malicious packages');
-      console.log('      • Rotate ALL credentials immediately');
-      console.log('      • Check for unauthorized access');
-      console.log('   4. Pin safe versions (remove ^ and ~ prefixes)');
-      console.log('   5. Update to latest safe versions\n');
+      console.log('   ⚠️  WARNING: This malware can DELETE YOUR ENTIRE HOME DIRECTORY');
+      console.log('   1. STOP - DO NOT run npm install/update (triggers payload)');
+      console.log('   2. Isolate system - Disconnect from network IMMEDIATELY');
+      console.log('   3. Check lock files for actual installed versions');
+      console.log('   4. If malicious versions are installed:');
+      console.log('      • Back up critical data NOW');
+      console.log('      • Malware may delete home directory if persistence fails');
+      console.log('      • Remove malicious packages carefully');
+      console.log('      • Rotate ALL credentials (API keys, SSH keys, tokens)');
+      console.log('      • Check for unauthorized repository access');
+      console.log('      • Scan for persistent backdoors');
+      console.log('   5. Pin safe versions (remove ^ and ~ prefixes)');
+      console.log('   6. Update to latest safe versions\n');
     }
 
     if (warnings.length > 0) {

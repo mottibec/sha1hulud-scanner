@@ -1,6 +1,6 @@
 /**
- * SHA1HULUD Malware Scanner
- * Detects malicious npm packages from the SHA1HULUD supply chain attack
+ * Sha1-Hulud Scanner
+ * Detects malicious npm packages from Sha1-Hulud: The Second Coming supply chain attack
  */
 
 const fs = require('fs');

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * SHA1HULUD Malware Scanner CLI
- * Detects malicious npm packages from the SHA1HULUD supply chain attack
+ * Sha1-Hulud Scanner CLI
+ * Detects malicious npm packages from Sha1-Hulud: The Second Coming supply chain attack
  *
  * Source: https://helixguard.ai/blog/malicious-sha1hulud-2025-11-24
  */
@@ -11,13 +11,14 @@ const path = require('path');
 const MalwareScanner = require('../src/scanner');
 const Reporter = require('../src/reporter');
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 
 function printUsage() {
   console.log(`
-SHA1HULUD Malware Scanner v${VERSION}
+Sha1-Hulud Scanner v${VERSION}
 
-Scans your npm projects for malicious packages from the SHA1HULUD supply chain attack.
+Scans your npm projects for malicious packages from Sha1-Hulud: The Second Coming supply chain attack.
+WARNING: This malware can delete your entire home directory if persistence fails.
 
 Usage:
   sha1hulud-scanner [options] [path]

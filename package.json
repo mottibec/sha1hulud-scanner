@@ -1,7 +1,7 @@
 {
   "name": "sha1hulud-scanner",
-  "version": "1.0.0",
-  "description": "Scanner for detecting malicious npm packages from the SHA1HULUD supply chain attack",
+  "version": "1.1.0",
+  "description": "Scanner for detecting malicious npm packages from Sha1-Hulud: The Second Coming supply chain attack. Protects against credential theft and destructive home directory deletion.",
   "main": "src/scanner.js",
   "bin": {
     "sha1hulud-scanner": "./bin/sha1hulud-scanner.js",

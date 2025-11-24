@@ -1,17 +1,20 @@
-# SHA1HULUD Scanner
+# Sha1-Hulud Scanner
 
-🔍 **Detect malicious npm packages from the SHA1HULUD supply chain attack**
+🔍 **Detect malicious npm packages from Sha1-Hulud: The Second Coming supply chain attack**
 
-This scanner helps identify if your projects are affected by the SHA1HULUD malware campaign, which compromised over 800 npm packages including popular libraries like PostHog, Voiceflow, AsyncAPI, ENS Domains, Zapier, and many others.
+This scanner helps identify if your projects are affected by the Sha1-Hulud malware campaign, which has compromised over 800 npm packages including popular libraries like PostHog, Voiceflow, AsyncAPI, ENS Domains, Zapier, and many others. This is a resurgence of the original Shai-Hulud attack with significantly more destructive capabilities.
 
-## ⚠️ What is SHA1HULUD?
+## ⚠️ CRITICAL: What is Sha1-Hulud: The Second Coming?
 
-SHA1HULUD is a massive supply chain attack discovered on November 24, 2025, targeting the npm ecosystem. Attackers published malicious versions of hundreds of legitimate packages that could:
+Sha1-Hulud: The Second Coming is a massive supply chain attack discovered on November 24, 2025, targeting the npm ecosystem. This new variant has affected tens of thousands of GitHub repositories across multiple maintainers and ecosystems.
+
+Attackers published malicious versions of hundreds of legitimate packages that:
 
 - Steal environment variables and credentials
+- Capture developer tokens and API keys
 - Exfiltrate sensitive data
-- Execute arbitrary code
-- Compromise your entire system
+- Establish persistent footholds in repositories
+- **DESTRUCTIVE FALLBACK**: If the malware fails to authenticate or establish persistence, it attempts to **delete your entire home directory**, removing every writable file owned by the current user
 
 **Source:** [HelixGuard Security Alert](https://helixguard.ai/blog/malicious-sha1hulud-2025-11-24)
 
@@ -135,16 +138,23 @@ The scanner checks the following files:
 
 ### If CRITICAL Issues Found:
 
-1. **DO NOT run `npm install` or `npm update`** - this could install malicious versions
-2. **Check your lock files** to see what's actually installed
-3. **If malicious versions are installed:**
-   - Disconnect from network immediately
-   - Remove malicious packages
-   - Rotate ALL credentials (API keys, passwords, tokens, secrets)
+**IMMEDIATE ACTIONS - Time Critical:**
+
+1. **STOP - DO NOT run `npm install` or `npm update`** - This will trigger the malicious payload
+2. **Isolate the system** - Disconnect from network IMMEDIATELY to prevent data exfiltration
+3. **Check your lock files** to see what's actually installed
+4. **If malicious versions are confirmed installed:**
+   - **URGENT**: The malware may attempt to delete your entire home directory if it cannot establish persistence
+   - Back up critical data immediately if not already backed up
+   - Disconnect all network access
+   - Remove malicious packages carefully
+   - Rotate ALL credentials (API keys, passwords, tokens, secrets, SSH keys, GPG keys)
    - Check for unauthorized access and data exfiltration
    - Review system logs for suspicious activity
-4. **Pin safe versions** - Remove `^` and `~` from package.json
-5. **Update to latest safe versions** from official package maintainers
+   - Scan for persistent backdoors in your repositories
+   - Check GitHub/GitLab access logs for unauthorized pushes
+5. **Pin safe versions** - Remove `^` and `~` from package.json
+6. **Update to latest safe versions** from official package maintainers
 
 ### If Warnings Found:
 
