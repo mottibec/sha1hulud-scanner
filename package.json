@@ -1,0 +1,44 @@
+{
+  "name": "sha1hulud-scanner",
+  "version": "1.0.0",
+  "description": "Scanner for detecting malicious npm packages from the SHA1HULUD supply chain attack",
+  "main": "src/scanner.js",
+  "bin": {
+    "sha1hulud-scanner": "./bin/sha1hulud-scanner.js",
+    "sha1hulud": "./bin/sha1hulud-scanner.js"
+  },
+  "scripts": {
+    "scan": "node bin/sha1hulud-scanner.js",
+    "test": "node bin/sha1hulud-scanner.js ."
+  },
+  "keywords": [
+    "security",
+    "malware",
+    "scanner",
+    "npm",
+    "supply-chain",
+    "sha1hulud",
+    "vulnerability",
+    "audit"
+  ],
+  "author": "Security Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mottibec/sha1hulud-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mottibec/sha1hulud-scanner/issues"
+  },
+  "homepage": "https://github.com/mottibec/sha1hulud-scanner#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "data/",
+    "README.md",
+    "LICENSE"
+  ]
+}

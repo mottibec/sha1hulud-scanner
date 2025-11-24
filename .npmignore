@@ -1,0 +1,20 @@
+# Testing
+test/
+*.test.js
+
+# Documentation sources
+docs/
+
+# Development
+.git/
+.github/
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
