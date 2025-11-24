@@ -203,10 +203,8 @@ We welcome contributions! Here's how you can help:
 The malicious package database is located in `data/malicious-packages-detailed.js`. To update:
 
 1. Get the latest data from [HelixGuard](https://helixguard.ai/blog/malicious-sha1hulud-2025-11-24)
-2. Run the data extraction script (if provided)
-3. Update the database file
-4. Test with `npm run test`
-5. Submit a PR
+2. Update the database file
+3. Submit a PR
 
 ## License
 
