@@ -41,7 +41,7 @@ cd sha1hulud-scanner
 node bin/sha1hulud-scanner.js
 ```
 
-## 📋 Features
+## Features
 
 - **Detects 622 compromised packages** with 860 malicious versions
 - **Smart semver range checking** - detects if `^` or `~` ranges could install malicious versions
