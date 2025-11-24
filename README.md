@@ -1,6 +1,6 @@
 # Sha1-Hulud Scanner
 
-🔍 **Detect malicious npm packages from Sha1-Hulud: The Second Coming supply chain attack**
+**Detect malicious npm packages from Sha1-Hulud: The Second Coming supply chain attack**
 
 This scanner helps identify if your projects are affected by the Sha1-Hulud malware campaign, which has compromised over 800 npm packages including popular libraries like PostHog, Voiceflow, AsyncAPI, ENS Domains, Zapier, and many others. This is a resurgence of the original Shai-Hulud attack with significantly more destructive capabilities.
 
