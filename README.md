@@ -20,20 +20,20 @@ Attackers published malicious versions of hundreds of legitimate packages that:
 
 ## 🚀 Quick Start
 
-### Global Installation
+### 1. Install from GitHub Packages (Public)
 
 ```bash
-npm install -g sha1hulud-scanner
+npm install -g @mottibec/sha1hulud-scanner
 sha1hulud-scanner
 ```
 
-### Local Usage (No Installation)
+### 2. Local/One-Off Usage
 
 ```bash
-npx sha1hulud-scanner
+npx @mottibec/sha1hulud-scanner
 ```
 
-### From Source
+### 3. From Source
 
 ```bash
 git clone https://github.com/mottibec/sha1hulud-scanner.git
@@ -168,7 +168,7 @@ The scanner checks the following files:
 You can use the scanner in your own Node.js scripts:
 
 ```javascript
-const MalwareScanner = require('sha1hulud-scanner');
+const MalwareScanner = require('@mottibec/sha1hulud-scanner');
 
 const scanner = new MalwareScanner({
   scanPath: '/path/to/project',
